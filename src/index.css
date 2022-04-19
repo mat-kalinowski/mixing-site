@@ -1,3 +1,10 @@
+@import url('http://fonts.cdnfonts.com/css/the-stamshons');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('http://fonts.cdnfonts.com/css/letter-marker');
+@import url('http://fonts.cdnfonts.com/css/stylish-marker');
+
+@import url('http://fonts.cdnfonts.com/css/stoopid-markers');
+
 body {
     padding: 20px;
     padding-top: 0px;
@@ -5,7 +12,13 @@ body {
     padding-right: 0px;
     background-color: #000000 !important;
     margin: 0;
+    padding-bottom: 50px;
   }
+
+  html,body {
+    height: 100%;
+  }
+
   h1, h2, h3, h4, p, ul, li {
     font-family: Lato;
     font-weight: 900;
@@ -20,8 +33,8 @@ h4 {
 #navMain {
   padding: 0px !important;
   background-color: black;
-  background-color: rgb(24, 24, 24);
   overflow: visible;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 a {
@@ -36,8 +49,8 @@ a {
   }
 
   .active {
-    background-color: rgb(32, 15, 15);
     min-height: 60px; 
+    border-bottom: 4px solid white;
   }
 
   .menuBrick:hover{
@@ -54,11 +67,25 @@ a {
   max-height: unset !important;
 }
 
+.photoContainer {
+  width: 100%;
+  margin: auto;
+}
+
 .headerPhoto {
-  background-image: url('/src/img/website.JPG');
+  background-image: url('/src/img/faded.png');
   background-repeat: no-repeat;
-  background-size: cover;
-  height: 400px;
+  background-size: contain;
+  width: 100%;
+  height: 600px;
+  background-position: top;
+  margin: auto;
+  padding-bottom: 8px !important;
+}
+
+.serviceHeader {
+    text-shadow: 0px 0px 5px black, 0px 0px 10px #000, 0px 0px 10px #000, 0px 0px 10px black,  0px 0px 10px #000, 0px 0px 10px black, 0px 0px 10px #000, 0px 0px 10px #000, 0px 0px 5px black, 0px 0px 10px #000, 0px 0px 10px #000;
+    color:rgb(206, 206, 206);
 }
 
 .mask-col {
@@ -66,8 +93,9 @@ a {
 }
 
 .c-align-center {
-  display: flex;
-  align-items: center !important;
+  text-align: left;
+  margin-left: 10em;
+  margin-top: 4em;
 }
 
 .c-logo {
@@ -85,4 +113,89 @@ a {
 
 .navbar { 
   min-height: 62px !important;
+}
+
+.menu-container {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  justify-content: space-around;
+}
+
+.c-home-button {
+  font-size: 30px;
+  color:white;
+  font-family: Lato;
+  font-weight: 900;
+
+}
+
+.c-home-subtitle {
+  font-family: Lato;
+  font-size: 15px;
+  color: #b0b0b0;
+  max-width: 25ch;
+}
+
+.c-size-big {
+  font-size: 30px;
+  vertical-align: -4px;
+}
+
+.c-size-huge {
+  font-size: 60px;
+  color: #b0b0b0;
+  vertical-align: -2px;
+}
+
+.vertBreak {
+  height: 140px;
+}
+
+.optionBrick {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-decoration: none;
+}
+
+.optionBrick:hover {
+  text-shadow: 0px 0px 20px rgb(202, 202, 202);
+}
+
+.footer {
+  background-color: #0e0d0d;
+  font-family: The Stamshons, sans-serif;
+  color: white;
+  font-size: 20px;
+  padding: 4px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.footerContainer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 40px;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+}
+
+.footerLogo {
+  max-height: 35px;
+  margin-left: 8px;
+  margin-bottom: 7px;
+  text-decoration: none;
+}
+
+.footerLogo:hover {
+  filter: drop-shadow(0 0 3px #666666);
+}
+
+.fiverr {
+  max-height: 26px;
+  margin: left 12px;
 }

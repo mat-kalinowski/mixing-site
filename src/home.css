@@ -1,63 +1,6 @@
-.c-music-header {
-    font-family: Lato;
-    font-weight: 900;
-    font-style: normal;
-    color: white;
-}
-
-.c-mixing-header {
-    max-width: 8ch;
-    line-height: 26pt;
-}
-
-.c-subtitle {
-    max-width: 14ch;
-    color: rgb(141, 141, 141);
-}
-
-.c-title-pane {
-    margin-right: 2em;
-    flex: 0 1 17%;
-}
-
-.c-music-container {
-    margin-bottom: 2.2em;
-    margin-right: 0px;
+.homeContainer {
     display:flex;
-}
-
-.c-video-container {
-    border-left: 4px solid rgb(141, 141, 141);
-    padding-left: 2em;
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-    flex: 0 1 73%;
-}
-
-.c-video-brick {
-    border:rgb(30, 30, 30) 2px solid;
-    border-radius: 10px;
-}
-
-.c-soundcloud-brick {
-    border:rgb(30, 30, 30) 4px solid;
-    border-radius: 10px;
-}
-
-.c-mixing-container {
-    display:flex;
-}
-.home-container {
-    padding-left: 6em;
-    padding-right: 0em;
-    padding-top: 2em;
-    padding-bottom: 1em;
-    width: 100%;
-    margin-right: 0px;
-   }
-
-.c-mix-name {
-    color: white;
-    font-weight: 900;
+    height:100%;
+    flex-flow: column;
+    flex-direction: column;
 }
