@@ -10,8 +10,7 @@ const opts = {
   height: '170',
   width: '300',
   playerVars: {
-    // https://developers.google.com/youtube/player_parameters
-    autoplay: 1,
+    autoplay: 0,
   },
 };
  
@@ -27,9 +26,23 @@ function Music() {
             </div>
             <div className="c-video-container">
                <YouTube className="c-video-brick" videoId="WqXI0ddP4-8" opts={opts}/>
-               <YouTube className="c-video-brick" videoId="2g811Eo7K8U" opts={opts}/>
+               <YouTube className="c-video-brick" videoId="VIS6I5aiJ5k" opts={opts}/>
                <YouTube className="c-video-brick" videoId="2g811Eo7K8U" opts={opts}/>
             </div>
+        </div>
+        <div className="c-mixing-container">
+          <div className="c-title-pane">
+          </div>
+          <div className="c-break-container">
+            <div className="c-description">Music that I have recorded, produced, mixed and mastered. In case of covers, writting goes to the original authors.</div>
+          </div>
+        </div>
+        <div className="c-mixing-container">
+          <div className="c-title-pane">
+          </div>
+          <div className="c-break-container break-margin">
+            <img className="HorizontalBreak" src="/break-horizontal-wide-border.png"/>
+          </div>
         </div>
         <div className="c-mixing-container">
           <div className="c-title-pane">
@@ -67,6 +80,14 @@ function Music() {
               playing={false}
               controls={true}
             />
+          </div>
+        </div>
+        <div className="c-mixing-container">
+          <div className="c-title-pane">
+          </div>
+          <div className="c-break-container">
+            <div className="c-description-mixing">Mixes and Masters that I've made for the URM mixing contests.
+            Writing, production, recording goes to the original authors.</div>
           </div>
         </div>
       </div>

@@ -81,11 +81,17 @@ a {
   background-position: top;
   margin: auto;
   padding-bottom: 8px !important;
+  display: flex;
+  flex-direction: column;
 }
 
 .serviceHeader {
-    text-shadow: 0px 0px 5px black, 0px 0px 10px #000, 0px 0px 10px #000, 0px 0px 10px black,  0px 0px 10px #000, 0px 0px 10px black, 0px 0px 10px #000, 0px 0px 10px #000, 0px 0px 5px black, 0px 0px 10px #000, 0px 0px 10px #000;
-    color:rgb(206, 206, 206);
+  text-shadow: 0px 0px 5px black, 0px 0px 10px #000, 0px 0px 10px #000, 0px 0px 10px black,  0px 0px 10px #000, 0px 0px 10px black;
+  margin: auto;
+  font-size: 35px;
+  width: 100%;
+  color: white;
+  background-color:rgba(0, 0, 0, 0.5);
 }
 
 .mask-col {
@@ -93,9 +99,12 @@ a {
 }
 
 .c-align-center {
-  text-align: left;
-  margin-left: 10em;
-  margin-top: 4em;
+  text-align: center;
+  margin:auto;
+  color: white;
+  font-family: Lato;
+  width: 100%;
+  font-weight: 400;
 }
 
 .c-logo {
@@ -120,6 +129,7 @@ a {
   width: 80%;
   margin: auto;
   justify-content: space-around;
+  margin-top: -1.5em;
 }
 
 .c-home-button {

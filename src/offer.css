@@ -1,0 +1,60 @@
+
+.lato-font {
+    font-family: Lato;
+    font-style: normal;
+}
+
+.c-free-sample {
+    color:white;
+    text-align: center;
+}
+
+.c-main-container {
+    max-width: 800px;
+    margin: auto;
+    margin-top: 4em;
+    display: flex;
+    flex-direction: column;
+}
+
+.c-contact {
+    border: grey solid 1px;
+    border-radius: 10px;
+    display: inline-block;
+    margin:auto;
+    margin-top: 1.5em;
+    position: relative;
+    padding: 0.5em;
+    margin-bottom: 1.5em;
+    color:white;
+}
+
+.c-offer-container {
+    margin-top: 1em;
+    margin-right: 0px;
+    display: flex;
+}
+
+.c-service-title-pane {
+    margin-right: 1em;
+    flex: 0 1 17%;
+    color:white;
+    text-align: left;
+    font-weight: 900;
+}
+
+.c-service-pane {
+    margin-left: 1em;
+    flex: 0 1 80%;
+    color:white;
+}
+
+.li-light {
+    font-weight: 400;
+}
+
+.c-services {
+    width: 95%;
+    margin: auto;
+}
+
