@@ -1,35 +1,53 @@
 import React from "react";
 import axios from 'axios';
 
+import { useState } from 'react';
+import { ProgressBar} from 'react-bootstrap';
+
 import './offer.css'
 import './freesample.css'
 
  
 function FreeSample() {
-  var uploadState = {state: ""};
+  const [ uploadPercentage, setUploadPercentage ] = useState('');
 
-  var getS3Url = async (dir, file, options) => {
+
+  var getS3Url = async (dir, file, event, showProgress = false) => {
     var url;
     const fileJSON = {name: dir + "/" + file.name};
 
-    await fetch("http://localhost:5001/s3-url", {
-      method: 'POST',
+    var reqOptions = {
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(fileJSON)
-    }, options).then(response => {
-      return response.json();
-    }).then(data => {
-      url = data['s3-url'];
-      console.log(data);
-    });  
+    };
 
-    alert(url);
-    const response = await fetch(url, {method: 'PUT', body: file});
-    console.log(`\nResponse returned by signed URL: ${await response.text()}\n`);     
+    await axios.post("http://localhost:5001/s3-url", JSON.stringify(fileJSON), reqOptions).then(res => {
+      url = res.data['s3-url'];
+    })
+
+    var s3ReqOptions = {}
+
+    if (showProgress) {
+      s3ReqOptions['onUploadProgress'] = (progressEvent) => {
+        const {loaded, total} = progressEvent;
+        let percent = Math.floor( loaded * 100 / total );
+
+        if(percent < 100) {
+          setUploadPercentage(percent)
+        }
+      }
+    }
+
+    await axios.put(url, file, s3ReqOptions).then( res => {
+      if(showProgress) {
+        setUploadPercentage(0);
+        alert("Files uploaded successfully");
+        event.target.reset();
+      }
+    });
   }
-
+ 
   var submitForm = function (e) {
     e.preventDefault();
 
@@ -40,17 +58,27 @@ function FreeSample() {
       type: "text/plain",
     });
 
-    getS3Url("stems - " + file.name, infoFile);
-
-    const options = {
-      onUploadProgress : (progressEvent) => {
-        const {loaded, total} = progressEvent;
-        let percent = Math.floor( loaded * 100 / total );
-        console.log(` ${loaded}kb of ${total}kb | ${percent}%`);
-      }
+    if(file && file.size > 500000000) {
+      alert("Maximum file size is 500MB.\n\nPlease upload file on service like Google Drive, Dropbox or WeTransfer. Then send me link in the instruction field. Thank you!");
     }
 
-    getS3Url("stems - " + file.name, file, options);
+    try {
+      getS3Url("stems - " + file.name, infoFile, e);
+    }
+    catch (e) {
+      alert("Couldn't upload the files. Please try again or contact me via email!");
+      return;
+    }
+
+    if(file) {
+      try {
+        getS3Url("stems - " + file.name, file, e, true);
+      }
+      catch (e) {
+        alert("Couldn't upload the files. Please try again or contact me via email!");
+        return;
+      }
+    }
   }
 
   return (
@@ -87,7 +115,7 @@ function FreeSample() {
         </div>
         <input type="submit" value="Submit"/>
         <div className="c-progress-bar">
-          { /*uploadPercentage > 0 && <ProgressBar now="uploadPercentage" active/>*/}
+          { uploadPercentage > 0 && <ProgressBar now={uploadPercentage} active label={`${uploadPercentage}`}/>}
         </div>
       </form>
       </div>
