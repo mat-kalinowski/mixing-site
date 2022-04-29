@@ -31,18 +31,13 @@ function Music() {
             </div>
         </div>
         <div className="c-mixing-container">
-          <div className="c-title-pane">
+          <div className="c-title-pane c-music-header">
           </div>
-          <div className="c-break-container">
+          <div className="c-break-container c-border-left">
             <div className="c-description">Music that I have recorded, produced, mixed and mastered. In case of covers, writting goes to the original authors.</div>
           </div>
         </div>
-        <div className="c-mixing-container">
-          <div className="c-title-pane">
-          </div>
-          <div className="c-break-container break-margin">
-            <img className="HorizontalBreak" src="/break-horizontal-wide-border.png"/>
-          </div>
+        <div className="c-mixing-container break-line">
         </div>
         <div className="c-mixing-container">
           <div className="c-title-pane">
@@ -85,7 +80,7 @@ function Music() {
         <div className="c-mixing-container">
           <div className="c-title-pane">
           </div>
-          <div className="c-break-container">
+          <div className="c-break-container c-border-left">
             <div className="c-description-mixing">Mixes and Masters that I've made for the URM mixing contests.
             Writing, production, recording goes to the original authors.</div>
           </div>

@@ -83,7 +83,6 @@ function Main()  {
   function VideoBackground() {
     return (
       <div className="backgroundVideo">
-
       </div>
     )
   }

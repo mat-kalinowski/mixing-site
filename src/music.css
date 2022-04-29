@@ -1,3 +1,4 @@
+
 .c-music-header {
     font-family: Lato;
     font-weight: 900;
@@ -9,7 +10,7 @@
 
 .c-mixing-header {
     max-width: 8ch;
-    line-height: 26pt;
+    line-height: 28pt;
 }
 
 .c-subtitle {
@@ -72,9 +73,10 @@
     /*border:rgb(59, 59, 59) solid 3px;*/
 }
 
-.break-margin {
-    margin-top: 1em;
-    margin-bottom: 3em;
+.break-line {
+    margin-top: 2.5em;
+    border-top: 4px solid rgb(30, 30, 30);
+    margin-bottom: 2.5em;
 }
 
 .c-break-container {
@@ -84,13 +86,17 @@
     flex: 0 1 73%;
 }
 
+.c-border-left {
+    border-left: 4px solid rgb(141, 141, 141); 
+}
+
 .c-description {
     margin-top: 1em;
     font-family: Lato;
     font-style: normal;
     color: white;
-    margin-bottom: 2em;
     padding-left: 2em;
+    margin-bottom: 0.25em;
 }
 
 .c-description-mixing {
@@ -99,5 +105,5 @@
     font-style: normal;
     color: white;
     padding-left: 2em;
-    margin-bottom: 2em;
+    margin-bottom: 0.25em;
 }
