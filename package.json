@@ -1,6 +1,9 @@
 {
   "name": "mixing-site",
   "version": "0.1.0",
+  "engines": {
+    "node": "16.x"
+  },
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.2",
@@ -13,6 +16,7 @@
     "react-bootstrap": "^2.2.1",
     "react-dom": "^17.0.2",
     "react-google-drive-picker": "^1.1.4",
+    "react-google-recaptcha": "^2.1.0",
     "react-player": "^2.10.0",
     "react-router-dom": "^6.2.2",
     "react-scripts": "5.0.0",

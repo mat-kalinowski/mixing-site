@@ -1,16 +1,17 @@
 import React from "react";
 import axios from 'axios';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { ProgressBar} from 'react-bootstrap';
+import ReCAPTCHA from "react-google-recaptcha";
 
 import './offer.css'
 import './freesample.css'
 
+const recaptchaRef = React.createRef();
  
 function FreeSample() {
   const [ uploadPercentage, setUploadPercentage ] = useState('');
-
 
   var getS3Url = async (dir, file, event, showProgress = false) => {
     var url;
@@ -47,10 +48,13 @@ function FreeSample() {
       }
     });
   }
- 
-  var submitForm = function (e) {
-    e.preventDefault();
 
+  function onChange(value) {
+    console.log("hello");
+    console.log("Captcha value:", value);
+  }
+
+  var uploadForm = async (e) => {
     var file = document.getElementById("fname").files[0]
 
     var infoContent = [e.target.firstname.value + '\n', e.target.email.value + '\n', e.target.instructions.value + '\n'];
@@ -60,6 +64,7 @@ function FreeSample() {
 
     if(file && file.size > 500000000) {
       alert("Maximum file size is 500MB.\n\nPlease upload file on service like Google Drive, Dropbox or WeTransfer. Then send me link in the instruction field. Thank you!");
+      return;
     }
 
     try {
@@ -79,6 +84,14 @@ function FreeSample() {
         return;
       }
     }
+  }
+ 
+  var submitForm = async (e) => {
+    e.preventDefault();
+    //const token = await reCaptchaRef.current.executeAsync();
+    recaptchaRef.current.execute(); 
+   //await uploadForm(e);
+    recaptchaRef.current.reset();
   }
 
   return (
@@ -115,8 +128,14 @@ function FreeSample() {
         </div>
         <input type="submit" value="Submit"/>
         <div className="c-progress-bar">
-          { uploadPercentage > 0 && <ProgressBar now={uploadPercentage} active label={`${uploadPercentage}`}/>}
+          { uploadPercentage > 0 && <ProgressBar now={uploadPercentage} label={`${uploadPercentage}`}/>}
         </div>
+        <ReCAPTCHA
+          ref={recaptchaRef}
+          onChange={onChange}
+          size="invisible"
+          sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+        />
       </form>
       </div>
     </div>
