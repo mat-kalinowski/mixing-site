@@ -23,7 +23,7 @@ function FreeSample() {
       },
     };
 
-    await axios.post("http://localhost:5001/s3-url", JSON.stringify(fileJSON), reqOptions).then(res => {
+    await axios.post("http://api.kalinekmusic.com/s3-url", JSON.stringify(fileJSON), reqOptions).then(res => {
       url = res.data['s3-url'];
     })
 
