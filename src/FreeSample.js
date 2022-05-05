@@ -1,7 +1,7 @@
 import React from "react";
 import axios from 'axios';
 
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import { ProgressBar} from 'react-bootstrap';
 import ReCAPTCHA from "react-google-recaptcha";
 
@@ -88,9 +88,11 @@ function FreeSample() {
  
   var submitForm = async (e) => {
     e.preventDefault();
-    //const token = await reCaptchaRef.current.executeAsync();
+    console.log("hello changes");
+    //const token = await recaptchaRef.current.executeAsync();
+    await recaptchaRef.current.executeAsync();
     recaptchaRef.current.execute(); 
-   //await uploadForm(e);
+    await uploadForm(e);
     recaptchaRef.current.reset();
   }
 
@@ -134,7 +136,7 @@ function FreeSample() {
           ref={recaptchaRef}
           onChange={onChange}
           size="invisible"
-          sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+          sitekey="6Ldzh8UfAAAAAEA-uKs8cQC65voYB_tHY6OksaG0"
         />
       </form>
       </div>

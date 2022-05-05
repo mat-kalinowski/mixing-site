@@ -1,6 +1,6 @@
 import React from "react";
 import ReactPlayer from "react-player";
-import { Col, Container, Row } from 'react-bootstrap';
+//import { Col, Container, Row } from 'react-bootstrap';
 import YouTube from 'react-youtube';
 
 import './music.css'
