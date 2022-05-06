@@ -27,7 +27,7 @@ function Music() {
             <div className="c-video-container">
                <YouTube className="c-video-brick" videoId="WqXI0ddP4-8" opts={opts}/>
                <YouTube className="c-video-brick" videoId="VIS6I5aiJ5k" opts={opts}/>
-               <YouTube className="c-video-brick" videoId="2g811Eo7K8U" opts={opts}/>
+               <YouTube className="c-video-brick" videoId="dNCJhW8Fuko" opts={opts}/>
             </div>
         </div>
         <div className="c-mixing-container">
