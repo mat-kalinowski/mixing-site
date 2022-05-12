@@ -67,6 +67,7 @@ function Main()  {
         <a target="_blank" rel="noreferrer" href="https://www.youtube.com/channel/UCFpGgycyejLu6Fo7PQgPUGg"><img alt="" className="footerLogo" src="/yt-simple.png"/></a>
         <a target="_blank" rel="noreferrer" href="https://www.fiverr.com/kalinek?up_rollout=true"><img alt="" className="footerLogo fiverr" src="/fiverr.png"/></a>
         <a target="_blank" rel="noreferrer" href="https://www.instagram.com/ka_linek"><img alt="" className="footerLogo fiverr" src="/instagram.png"/></a>
+        <div className="footerEmailInfo">support@kalinekmusic.com</div>
       </div>
     </>
     );
