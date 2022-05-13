@@ -213,7 +213,7 @@ a {
   overflow: hidden;
   text-align: center;
   background-color: rgb(12, 12, 12);
-  border-top:solid 1px rgb(31, 30, 30);
+  border-top:solid 2px rgb(31, 30, 30);
 }
 
 .footerLogo {
@@ -229,5 +229,9 @@ a {
 
 .fiverr {
   max-height: 24px;
-  margin: left 12px;
+  margin: left 15px;
+}
+
+.grecaptcha-badge { 
+  bottom:100px !important; 
 }
