@@ -23,7 +23,7 @@ function FreeSample() {
       },
     };
 
-    await axios.post("http://api.kalinekmusic.com/s3-url", JSON.stringify(fileJSON), reqOptions).then(res => {
+    await axios.post("https://www.api.kalinekmusic.com/s3-url", JSON.stringify(fileJSON), reqOptions).then(res => {
       url = res.data['s3-url'];
     })
 
@@ -39,6 +39,8 @@ function FreeSample() {
         }
       }
     }
+
+    console.log(`URL: ${url}`)
 
     await axios.put(url, file, s3ReqOptions).then( res => {
       if(showProgress) {
@@ -88,7 +90,6 @@ function FreeSample() {
  
   var submitForm = async (e) => {
     e.preventDefault();
-    console.log("hello changes");
     //const token = await recaptchaRef.current.executeAsync();
     await recaptchaRef.current.executeAsync();
     recaptchaRef.current.execute(); 
