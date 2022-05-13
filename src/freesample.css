@@ -31,7 +31,8 @@ input[type=text], select, textarea {
     border: 2px solid rgb(116, 116, 116);
     border-radius: 8px;
     box-sizing: border-box;
-    font-family: Lato;
+    font-family: 'Lato', sans-serif; font-weight:400; font-style:normal;
+
   }
 
   input[type=file] {
@@ -42,7 +43,7 @@ input[type=text], select, textarea {
     border: 2px solid rgb(116, 116, 116);
     border-radius: 8px;
     box-sizing: border-box;
-    font-family: Lato;
+    font-family: 'Lato', sans-serif; font-weight:400; font-style:normal;
   }
 
   .c-file-input {
@@ -69,8 +70,8 @@ input[type=text], select, textarea {
 }
 
   .c-field-label {
-      font-family: Lato;
-      color:rgb(168, 168, 168);
+    font-family: 'Lato', sans-serif; font-weight:400; font-style:normal;
+    color:rgb(168, 168, 168);
   }
   
   .c-info-brick {
@@ -86,7 +87,7 @@ input[type=text], select, textarea {
   }
 
   .c-format-style {
-    font-family: Lato;
+    font-family: 'Lato', sans-serif; font-weight:400; font-style:normal;
     color: white;
     margin: auto;
     padding: 8px 20px;
