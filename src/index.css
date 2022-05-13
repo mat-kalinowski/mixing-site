@@ -73,7 +73,8 @@ a {
 }
 
 .headerPhoto {
-  background-image: url('/src/img/faded.png');
+  /*background-image: url('/src/img/faded.png');*/
+  background-image: url('/src/img/faded-comphard.jpg');
   background-repeat: no-repeat;
   background-size: contain;
   width: 100%;
