@@ -45,15 +45,6 @@ function Music() {
             <h4 className="c-subtitle">SAMPLES OF MY MIXES/MASTERS</h4>
           </div>
           <div className="c-video-container">
-            {/*
-            <h7 className="c-mix-name">WE COULD BE HEROES - CONWAY</h7>
-            <ReactPlayer
-              url="https://www.dropbox.com/s/q17npuibjso2jf2/of%20mice%20and%20man%20-%20mosaic.mp3?raw=1"
-              width="280px"
-              height="50px"
-              playing={false}
-              controls={true}
-              />*/}
             <ReactPlayer className="c-soundcloud-brick"
               url="https://soundcloud.com/user-210332570-274097494/we-could-be-heroes-conway"
               width="300px"

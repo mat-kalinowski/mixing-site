@@ -1,6 +1,7 @@
 
 .lato-font {
     font-family: Lato;
+    font-weight: 300;
     font-style: normal;
 }
 
@@ -50,7 +51,7 @@
 }
 
 .li-light {
-    font-weight: 400;
+    font-weight: 300;
 }
 
 .c-services {

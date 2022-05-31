@@ -6,6 +6,7 @@ import './home.css'
 
 
 function Home() {
+  console.log(`window inner height: ${window.innerHeight}`);
   return (
     <div className="menu-container">
     <a className="optionBrick" href="#/music">

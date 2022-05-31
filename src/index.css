@@ -1,9 +1,18 @@
-@import url('http://fonts.cdnfonts.com/css/the-stamshons');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 @import url('http://fonts.cdnfonts.com/css/letter-marker');
 @import url('http://fonts.cdnfonts.com/css/stylish-marker');
 
 @import url('http://fonts.cdnfonts.com/css/stoopid-markers');
+
+@font-face 
+{
+font-family: "The Stamshons";
+src: url("TheStamshons.ttf");
+src:
+url("TheStamshons.ttf") format("woff"),
+url("TheStamshons.ttf") format("opentype"),
+url("TheStamshons.ttf") format("svg");
+}
 
 body {
     padding: 20px;
@@ -103,9 +112,9 @@ a {
   text-align: center;
   margin:auto;
   color: white;
-  font-family: Lato;
+  font-family: 'Lato', sans-serif;
   width: 100%;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .c-logo {
@@ -145,6 +154,7 @@ a {
   font-family: Lato;
   font-size: 15px;
   color: #b0b0b0;
+  font-weight: 300;
   max-width: 25ch;
 }
 
@@ -154,7 +164,7 @@ a {
 }
 
 .c-size-huge {
-  font-size: 60px;
+  font-size: 46px;
   color: #b0b0b0;
   vertical-align: -2px;
 }
@@ -181,7 +191,7 @@ a {
 }
 
 .footer {
-  font-family: The Stamshons, sans-serif;
+  font-family: 'The Stamshons', sans-serif;
   color: white;
   font-size: 20px;
   padding: 4px;
@@ -201,20 +211,33 @@ a {
   position: absolute; 
   right: 30px;
   bottom: 8px;
-
 }
 
 .footerContainer {
-  padding-top:3px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
+  position: relative;
+  margin-top: 2em;
+  padding-top: 3px;
   height: 40px;
   width: 100%;
   overflow: hidden;
   text-align: center;
-  background-color: rgb(12, 12, 12);
-  border-top:solid 2px rgb(31, 30, 30);
+  /*background-color: rgb(12, 12, 12);
+  border-top:solid 2px rgb(31, 30, 30);*/
+}
+
+@media only screen and (max-height: 790px) and (min-height: 100px)
+{
+  .footerContainer {
+    margin-top: 4em;
+  }
+}
+
+@media only screen and (min-height: 790px) and (max-height: 1000px){
+  .footerContainer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
 }
 
 .footerLogo {

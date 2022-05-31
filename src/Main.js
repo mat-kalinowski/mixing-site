@@ -16,12 +16,21 @@ import './common.css'
 
 import { Navbar, Nav, NavItem } from 'react-bootstrap';
 import { useLocation } from 'react-router-dom';
+import useWindowDimensions from "./Responsive";
 
+function ResponsiveWrapper() {
 
-function Main()  {
+  // 0px  xs   600px  sm  960px lg   1280px xl  1920px
+  const dimensions = useWindowDimensions();
+  console.log(`dimensions: ${dimensions.height}`)
+
+  if(dimensions.height > 460) return (<DesktopMain/>);
+  else return (<PhoneMain/>);
+}
+
+function DesktopMain()  {
   const location = useLocation();
   let backgroundStyles = "p-3 pb-0 text-center bg-image"
-
 
   if (location.pathname === "/") {
     backgroundStyles += " headerPhoto"
@@ -72,6 +81,56 @@ function Main()  {
     </>
     );
   }
+
+  function PhoneMain()  {
+    const location = useLocation();
+    let backgroundStyles = "p-3 pb-0 text-center bg-image"
+  
+  
+    if (location.pathname === "/") {
+      backgroundStyles += " headerPhoto"
+    }
+  
+    return (
+      <>
+        <div>
+          <div className={backgroundStyles}>
+            {location.pathname !== "/" && <VideoBackground/>}
+            <Navbar className="justify-content-center align-items-center nav-custom" id="navMain" expand="sm">
+              <Nav className="mr-auto">
+                <Navbar.Brand className="ml-auto" href="/">
+                    <img alt="" className="c-logo" src="/kalineklogo.png"/>
+                </Navbar.Brand>
+                <NavItem eventkey={1} href="/">
+                  <NavLink className="menuBrick" to="/">Home</NavLink>
+                </NavItem>
+                <NavItem eventkey={1} href="/">
+                  <NavLink className="menuBrick" to="/music">Music</NavLink>
+                </NavItem>
+                <NavItem eventkey={1} href="/">
+                  <NavLink className="menuBrick" to="/offer">Offer</NavLink>
+                </NavItem>
+                <NavItem eventkey={1} href="/">
+                  <NavLink className="menuBrick" to="/freesample">Free Sample</NavLink>
+                </NavItem>
+              </Nav>
+            </Navbar>
+  
+        {location.pathname === "/" && <SubHeader/>}
+  
+        </div>
+          <Routes>
+            <Route exact path="/" element={ <Home/> }/>
+            <Route exact path="/music" element={ <Music/> }/>
+            <Route path="/offer" element={ <Offer/> }/>
+            <Route path="/freesample" element={ <FreeSample/> }/>
+          </Routes>
+        </div>
+
+      </>
+      );
+  }
+
  
   function SubHeader() {    
     return (
@@ -87,4 +146,5 @@ function Main()  {
       </div>
     )
   }
-export default Main;
+
+export default ResponsiveWrapper;
