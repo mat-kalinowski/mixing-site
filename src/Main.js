@@ -84,13 +84,12 @@ function DesktopMain()  {
   function PhoneMain()  {
     const location = useLocation();
     let backgroundStyles = "p-2 pb-0 text-center bg-image"
-    backgroundStyles += " headerPhoto"
+
   
     return (
       <>
         <div>
           <div className={backgroundStyles}>
-            {location.pathname !== "/" && <VideoBackground/>}
             <Navbar className="justify-content-center align-items-center nav-custom" id="navMain" expand="sm">
               <Nav className="mr-auto">
                 <Navbar.Brand className="ml-auto" href="/">
@@ -98,11 +97,7 @@ function DesktopMain()  {
                 </Navbar.Brand>
               </Nav>
             </Navbar>
-  
-        <SubHeader/>
-  
-        </div>
-        <Navbar className="justify-content-center align-items-center nav-custom mb-5" id="navMain" >
+            <Navbar className="justify-content-center align-items-center nav-custom" id="navMain" >
               <Nav className="mr-auto">
                 <NavItem eventkey={1} href="/">
                   <NavLink className="menuBrick" to="/">Home</NavLink>
@@ -118,13 +113,27 @@ function DesktopMain()  {
                 </NavItem>
               </Nav>
           </Navbar>
-
-          <Routes>
-            <Route exact path="/" element={ <Home/> }/>
-            <Route exact path="/music" element={ <Music/> }/>
-            <Route path="/offer" element={ <Offer/> }/>
-            <Route path="/freesample" element={ <FreeSample/> }/>
-          </Routes>
+  
+          </div>
+          
+            <Routes>
+              <Route exact path="/" element={
+              <>
+                <div className="headerPhotoPhone">
+                  <SubHeader/>
+                </div>
+                <Home/>
+              </>}/>
+              <Route exact path="/music" element={
+              <>
+                <div className="headerPhotoPhone">
+                  <SubHeader/>
+                </div>
+                <Music/>
+              </>}/>
+              <Route path="/offer" element={ <Offer/> }/>
+              <Route path="/freesample" element={ <FreeSample/> }/>
+            </Routes>
         </div>
 
       </>

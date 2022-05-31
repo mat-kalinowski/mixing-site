@@ -46,6 +46,13 @@ h4 {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
+@media only screen and (max-height: 790px) and (min-height: 100px)
+{
+  .footerContainer {
+    margin-top: 4em;
+  }
+}
+
 a {
     color: #FFF;
     text-decoration: none;
@@ -102,6 +109,22 @@ a {
   }
 }
 
+.headerPhotoPhone {
+  /*background-image: url('/src/img/faded.png');*/
+  background-image: url('/src/img/faded-comphard.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;  
+  height: 300px;
+  background-size: auto 350px;
+  background-position: top;
+  margin: auto;
+  margin-top: -4em;
+  padding-bottom: 8px !important;
+  display: flex;
+  flex-direction: column;
+}
+
 .serviceHeader {
   text-shadow: 0px 0px 5px black, 0px 0px 10px #000, 0px 0px 10px #000, 0px 0px 10px black,  0px 0px 10px #000, 0px 0px 10px black;
   margin: auto;
@@ -116,7 +139,7 @@ a {
     height: 370px;
   }
   .serviceHeader {
-    font-size: 27px;
+    font-size: 24px;
   }
 }
 
@@ -163,7 +186,6 @@ a {
   color:white;
   font-family: Lato;
   font-weight: 900;
-
 }
 
 .c-home-subtitle {
