@@ -115,11 +115,11 @@ a {
   background-repeat: no-repeat;
   background-size: contain;
   width: 100%;  
-  height: 300px;
-  background-size: auto 350px;
+  height: 250px;
+  background-size: auto 330px;
   background-position: top;
   margin: auto;
-  margin-top: -4em;
+  margin-top: -3em;
   padding-bottom: 8px !important;
   display: flex;
   flex-direction: column;
@@ -181,6 +181,13 @@ a {
   margin-top: -2em;
 }
 
+@media screen and (max-width: 600px) {
+  .menu-container {
+    margin-top: 0.1em;
+    flex-direction: column;
+  }
+}
+
 .c-home-button {
   font-size: 30px;
   color:white;
@@ -214,6 +221,14 @@ a {
 .vertBreakBorder {
   height:140px;
   border-left: 5px solid grey;
+}
+
+.horBreakBorder {
+  width:300px;
+  margin:auto;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  border-top: 3px solid grey;
 }
 
 .optionBrick {

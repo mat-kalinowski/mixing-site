@@ -9,6 +9,7 @@ import {
 
 import Music from "./Music";
 import Home from "./Home";
+import {HomeResponsive} from "./Home"
 import Offer from "./Offer";
 import FreeSample from "./FreeSample";
 import './index.css'
@@ -60,7 +61,7 @@ function DesktopMain()  {
             </Nav>
           </Navbar>
 
-      {location.pathname === "/" && <SubHeader/>}
+      {location.pathname === "/" && <SubHeader textContent="MIX, MASTER AND PRODUCTION"/>}
 
       </div>
         <Routes>
@@ -82,10 +83,8 @@ function DesktopMain()  {
   }
 
   function PhoneMain()  {
-    const location = useLocation();
     let backgroundStyles = "p-2 pb-0 text-center bg-image"
 
-  
     return (
       <>
         <div>
@@ -120,14 +119,14 @@ function DesktopMain()  {
               <Route exact path="/" element={
               <>
                 <div className="headerPhotoPhone">
-                  <SubHeader/>
+                  <SubHeader textContent="MIX, MASTER AND PRODUCTION"/>
                 </div>
-                <Home/>
+                <HomeResponsive/>
               </>}/>
               <Route exact path="/music" element={
               <>
                 <div className="headerPhotoPhone">
-                  <SubHeader/>
+                  <SubHeader textContent="MY RECORDINGS AND MIXES"/>
                 </div>
                 <Music/>
               </>}/>
@@ -140,10 +139,10 @@ function DesktopMain()  {
       );
   }
 
-  function SubHeader() {    
+  function SubHeader(props) {    
     return (
       <div className="c-align-center">
-          <div className="serviceHeader">MIX, MASTER AND PRODUCTION</div>
+          <div className="serviceHeader">{props.textContent}</div>
       </div>
     )
   }
