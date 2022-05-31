@@ -95,6 +95,13 @@ a {
   flex-direction: column;
 }
 
+@media screen and (max-width: 1200px) {
+  .headerPhoto {
+    height: 450px;
+    background-size: auto 400px;
+  }
+}
+
 .serviceHeader {
   text-shadow: 0px 0px 5px black, 0px 0px 10px #000, 0px 0px 10px #000, 0px 0px 10px black,  0px 0px 10px #000, 0px 0px 10px black;
   margin: auto;
@@ -102,6 +109,15 @@ a {
   width: 100%;
   color: white;
   background-color:rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 600px) {
+  .headerPhoto {
+    height: 370px;
+  }
+  .serviceHeader {
+    font-size: 27px;
+  }
 }
 
 .mask-col {

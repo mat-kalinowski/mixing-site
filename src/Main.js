@@ -22,9 +22,8 @@ function ResponsiveWrapper() {
 
   // 0px  xs   600px  sm  960px lg   1280px xl  1920px
   const dimensions = useWindowDimensions();
-  console.log(`dimensions: ${dimensions.height}`)
 
-  if(dimensions.height > 460) return (<DesktopMain/>);
+  if(dimensions.width > 600) return (<DesktopMain/>);
   else return (<PhoneMain/>);
 }
 
@@ -84,12 +83,8 @@ function DesktopMain()  {
 
   function PhoneMain()  {
     const location = useLocation();
-    let backgroundStyles = "p-3 pb-0 text-center bg-image"
-  
-  
-    if (location.pathname === "/") {
-      backgroundStyles += " headerPhoto"
-    }
+    let backgroundStyles = "p-2 pb-0 text-center bg-image"
+    backgroundStyles += " headerPhoto"
   
     return (
       <>
@@ -101,6 +96,14 @@ function DesktopMain()  {
                 <Navbar.Brand className="ml-auto" href="/">
                     <img alt="" className="c-logo" src="/kalineklogo.png"/>
                 </Navbar.Brand>
+              </Nav>
+            </Navbar>
+  
+        <SubHeader/>
+  
+        </div>
+        <Navbar className="justify-content-center align-items-center nav-custom mb-5" id="navMain" >
+              <Nav className="mr-auto">
                 <NavItem eventkey={1} href="/">
                   <NavLink className="menuBrick" to="/">Home</NavLink>
                 </NavItem>
@@ -114,11 +117,8 @@ function DesktopMain()  {
                   <NavLink className="menuBrick" to="/freesample">Free Sample</NavLink>
                 </NavItem>
               </Nav>
-            </Navbar>
-  
-        {location.pathname === "/" && <SubHeader/>}
-  
-        </div>
+          </Navbar>
+
           <Routes>
             <Route exact path="/" element={ <Home/> }/>
             <Route exact path="/music" element={ <Music/> }/>
@@ -131,7 +131,6 @@ function DesktopMain()  {
       );
   }
 
- 
   function SubHeader() {    
     return (
       <div className="c-align-center">
