@@ -1,8 +1,24 @@
 
+.break-line-thin-offer {
+    border-top: 3px solid rgb(30, 30, 30);
+    margin-top: 3em;
+    margin-bottom: 1.5em;
+    width: 100%;
+}
+
 .lato-font {
     font-family: Lato;
     font-weight: 300;
     font-style: normal;
+}
+
+.price-container {
+    width: 100%;
+}
+
+.break-line-service {
+    border-top: 2px solid rgb(30, 30, 30);
+    width: 100%;
 }
 
 .c-free-sample {
@@ -13,7 +29,7 @@
 .c-main-container {
     max-width: 800px;
     margin: auto;
-    margin-top: 2em;
+    margin-top: 3em;
     display: flex;
     flex-direction: column;
 }
@@ -26,8 +42,8 @@
 
 @media screen and (max-width: 1200px) {
     .c-main-container {
-        margin-right:2em;
-        margin-left:2em;
+        margin-right:1.5em;
+        margin-left:1.5em;
     }
 }
 
@@ -39,8 +55,12 @@
     margin-top: 1.5em;
     position: relative;
     padding: 0.5em;
-    margin-bottom: 1.5em;
     color:white;
+}
+
+@media screen and (min-width: 600px)
+{
+    margin-bottom: 1.5em;
 }
 
 .c-offer-container {
@@ -49,18 +69,86 @@
     display: flex;
 }
 
+@media screen and (max-width: 600px) 
+{
+    .c-offer-container {
+        margin-top:0em;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 .c-service-title-pane {
-    margin-right: 1em;
     flex: 0 1 17%;
     color:white;
-    text-align: left;
+    text-align: center;
     font-weight: 900;
+}
+
+@media screen and (min-width: 600px) 
+{
+    .c-service-title-pane {
+        margin-right: 1em;
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 600px) 
+{
+    .c-service-title-pane {
+        margin-top: 0.5em;
+        margin-bottom: 1.5em;
+        text-align: left;
+    }
 }
 
 .c-service-pane {
     margin-left: 1em;
     flex: 0 1 80%;
     color:white;
+}
+
+.c-service-table {
+    display: flex;
+    color:white;
+    flex-direction: row;
+}
+
+.c-mixing-right {
+    flex: 0 1 30%;
+    border: 1px solid grey;
+    border-left: 0px;
+    border-bottom: 0px;
+    padding: 10px;
+    text-align: center;
+}
+
+.c-mixing-left {
+    flex: 0 1 70%;
+    border: 1px solid grey;
+    padding: 10px;
+    border-bottom: 0px;
+}
+
+.c-production-right {
+    flex: 0 1 65%;
+    border: 1px solid grey;
+    border-left: 0px;
+    border-bottom: 0px;
+    padding: 10px;
+    text-align: center;
+}
+
+.c-production-left {
+    flex: 0 1 35%;
+    border: 1px solid grey;
+    padding: 10px;
+    border-bottom: 0px;
+    text-align: center;
+}
+
+.c-table-last {
+    border-bottom: 1px solid grey;
 }
 
 .li-light {

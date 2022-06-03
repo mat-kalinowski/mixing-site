@@ -4,6 +4,13 @@
     margin-bottom: 1em;
 }
 
+@media screen and (max-width: 600px)
+{
+  .c-header {
+    display: none;
+  }
+}
+
 .c-form {
     margin-top: 1em;
 }

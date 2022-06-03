@@ -12,6 +12,7 @@ import {MusicResponsive} from "./Music";
 import Home from "./Home";
 import {HomeResponsive} from "./Home"
 import Offer from "./Offer";
+import {OfferResponsive} from "./Offer";
 import FreeSample from "./FreeSample";
 import './index.css'
 import './common.css'
@@ -136,7 +137,7 @@ function DesktopMain()  {
                 <div className="headerPhotoPhone">
                   <SubHeader textContent="GET IN TOUCH WITH ME"/>
                 </div>
-                <Offer/>
+                <OfferResponsive/>
               </>}/>
               <Route path="/freesample" element={
               <>
@@ -153,7 +154,6 @@ function DesktopMain()  {
         <a target="_blank" rel="noreferrer" href="https://www.fiverr.com/kalinek?up_rollout=true"><img alt="" className="footerLogo fiverr" src="/fiverr.png"/></a>
         <a target="_blank" rel="noreferrer" href="https://www.instagram.com/ka_linek"><img alt="" className="footerLogo fiverr" src="/instagram.png"/></a>
       </div>
-
       </>
       );
   }
