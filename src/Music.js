@@ -16,7 +16,6 @@ const opts = {
  
 function Music() {
   return (
-
     <>
       <div className="home-container">
         <div className="c-music-container">
@@ -33,9 +32,7 @@ function Music() {
         <div className="c-mixing-container">
           <div className="c-title-pane c-music-header">
           </div>
-          <div className="c-break-container c-border-left">
-            <div className="c-description">Music that I have recorded, produced, mixed and mastered. In case of covers, writting goes to the original authors.</div>
-          </div>
+          <div className="c-description">Music that I have recorded, produced, mixed and mastered. In case of covers, writting goes to the original authors.</div>
         </div>
         <div className="c-mixing-container break-line">
         </div>
@@ -71,10 +68,67 @@ function Music() {
         <div className="c-mixing-container">
           <div className="c-title-pane">
           </div>
-          <div className="c-break-container c-border-left">
             <div className="c-description-mixing">Mixes and Masters that I've made for the URM mixing contests.
             Writing, production, recording goes to the original authors.</div>
+        </div>
+      </div>
+    </>
+  );
+}
+
+export function MusicResponsive() {
+  return (
+    <>
+      <div className="home-container">
+        <div className="c-music-container">
+            <div className="c-title-pane">
+              <h1 className="c-music-header">MY MUSIC</h1>
+              <h4 className="c-subtitle">SAMPLES OF MY RECORDINGS</h4>
+            </div>
+            <div className="c-video-container">
+               <YouTube className="c-video-brick" videoId="WqXI0ddP4-8" opts={opts}/>
+              <div className="break-line-thin"></div>
+               <YouTube className="c-video-brick" videoId="VIS6I5aiJ5k" opts={opts}/>
+              <div className="break-line-thin"></div>
+               <YouTube className="c-video-brick" videoId="dNCJhW8Fuko" opts={opts}/>
+            </div>
+        </div>
+        <div className="c-mixing-container margin-horizontal">
+          <div className="c-title-pane">
+            <h1 className="c-mixing-header c-music-header">CONTEST MIXING</h1>
+            <h4 className="c-subtitle">SAMPLES OF MY MIXES/MASTERS</h4>
           </div>
+          <div className="c-video-container">
+            <ReactPlayer className="c-soundcloud-brick"
+              url="https://soundcloud.com/user-210332570-274097494/we-could-be-heroes-conway"
+              width="300px"
+              height="160px"
+              playing={false}
+              controls={true}
+            />
+            <div className="break-line-thin"></div>
+            <ReactPlayer className="c-soundcloud-brick"
+              url="https://soundcloud.com/user-210332570-274097494/black-sabbath-paranoid-solo-cover"
+              width="300px"
+              height="160px"
+              playing={false}
+              controls={true}
+            />
+            <div className="break-line-thin"></div>
+            <ReactPlayer className="c-soundcloud-brick"
+              url="https://soundcloud.com/user-210332570-274097494/eternal-frequency-down2"
+              width="300px"
+              height="160px"
+              playing={false}
+              controls={true}
+            />
+          </div>
+        </div>
+        <div className="c-mixing-container">
+          <div className="c-title-pane">
+          </div>
+            {/*<div className="c-description-mixing">Mixes and Masters that I've made for the URM mixing contests.
+            Writing, production, recording goes to the original authors.</div>*/}
         </div>
       </div>
     </>

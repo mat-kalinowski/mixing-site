@@ -8,6 +8,7 @@ import {
 
 
 import Music from "./Music";
+import {MusicResponsive} from "./Music";
 import Home from "./Home";
 import {HomeResponsive} from "./Home"
 import Offer from "./Offer";
@@ -128,10 +129,22 @@ function DesktopMain()  {
                 <div className="headerPhotoPhone">
                   <SubHeader textContent="MY RECORDINGS AND MIXES"/>
                 </div>
-                <Music/>
+                <MusicResponsive/>
               </>}/>
-              <Route path="/offer" element={ <Offer/> }/>
-              <Route path="/freesample" element={ <FreeSample/> }/>
+              <Route path="/offer" element={
+              <>
+                <div className="headerPhotoPhone">
+                  <SubHeader textContent="GET IN TOUCH WITH ME"/>
+                </div>
+                <Offer/>
+              </>}/>
+              <Route path="/freesample" element={
+              <>
+                <div className="headerPhotoPhone">
+                  <SubHeader textContent="FREE SAMPLE FOR EVERY SERVICE"/>
+                </div>
+                <FreeSample/>
+              </>}/>
             </Routes>
         </div>
         <div className="footerContainer">
